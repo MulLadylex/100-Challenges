@@ -42,20 +42,3 @@ Case2:
 > 时间复杂度：O(n^2)  
 > n为数组长度，求两数之积以及遍历所有的两数之积均为O(n^2)
 > 空间复杂度：O(n^2) 
-
-```go
-func tupleSameProduct(nums []int) int {
-    n := len(nums)
-    cnt := make(map[int]int)
-    for i := 0; i < n; i++ {
-        for j := i + 1; j < n; j++ {
-            cnt[nums[i] * nums[j]]++
-        }
-    }
-    ans := 0
-    for _, v := range cnt {
-        ans += v * (v - 1) * 4
-    }
-    return ans
-}
-```
