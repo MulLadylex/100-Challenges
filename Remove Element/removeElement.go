@@ -1,8 +1,4 @@
-package main
-
-func main() {
-
-}
+package removeElement
 
 func removeElement(nums []int, val int) int {
 	i, j := 0, 0
